@@ -1,0 +1,65 @@
+.game-stack {
+  display: flex;
+  flex-direction: column;
+  padding-top: 1.5rem;
+  padding-inline: .625rem;
+  gap: .625rem;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  overflow-y: auto;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &-actions {
+      display: flex;
+      gap: .625rem;
+    }
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    gap: .625rem;
+  }
+
+  &__hero-image {
+    object-fit: contain;
+    min-height: 200px;
+    height: auto;
+    width: auto;
+  }
+
+  &__map {
+    &-container {
+      display: flex;
+      flex-direction: column;
+      width: min-content;
+      background-color: var(--secondary);
+      gap: .5rem;
+      border-radius: .625rem;
+    }
+
+    &-image {
+      height: 80px;
+      margin-top: .5rem;
+      object-fit: cover;
+      max-width: 100%;
+      border-radius: .625rem;
+      padding-inline: .5rem;
+    }
+  }
+
+  &__background {
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+} 

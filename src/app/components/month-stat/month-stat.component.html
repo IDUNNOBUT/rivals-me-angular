@@ -1,0 +1,15 @@
+<div [class]="className + ' month-stat'">
+  <ng-container *ngIf="apiState$ | async as state">
+    <ng-container *ngIf="state.isLoading; else chartBlock">
+      <app-skeleton></app-skeleton>
+    </ng-container>
+    <ng-template #chartBlock>
+      <canvas baseChart
+              *ngIf="chartData.labels?.length"
+              [data]="chartData"
+              [options]="chartOptions"
+              [type]="'line'">
+      </canvas>
+    </ng-template>
+  </ng-container>
+</div> 

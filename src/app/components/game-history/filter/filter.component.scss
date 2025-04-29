@@ -1,0 +1,27 @@
+.filter {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .625rem;
+
+  &__item {
+    min-width: 7.5rem;
+  }
+
+  &__loading {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    
+    span {
+      font-size: 0.75rem;
+      color: #fff;
+    }
+  }
+
+  &__button {
+    width: 2.5rem;
+    height: 2.5rem;
+    flex-shrink: 0;
+  }
+} 

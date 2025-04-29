@@ -1,0 +1,36 @@
+<div [class]="className + ' top-list'">
+  <div class="top-list__header-row font_oswald font_l font_white">
+    <div class="top-list__header"></div>
+    <div class="top-list__header"></div>
+    <div class="top-list__header top-list__header_additional">Hero</div>
+    <div class="top-list__header">Pick <span class="top-list__header_additional">Rate</span></div>
+    <div class="top-list__header">Win <span class="top-list__header_additional">Rate</span></div>
+  </div>
+  <ng-container *ngIf="apiState$ | async as state">
+    <ng-container *ngIf="state.isLoading; else dataBlock">
+      <ng-container *ngFor="let i of [0,1,2]">
+        <app-skeleton [grid]="true" [height]="'l'"></app-skeleton>
+      </ng-container>
+    </ng-container>
+    <ng-template #dataBlock>
+      <ng-container *ngFor="let hero of state.data; let index = index">
+        <div class="top-list__item">
+          <div class="top-list__item-index font_oswald font_xl">{{ index + 1 }}</div>
+          <div class="top-list__item-image icon icon_l">
+            <img
+              height="64"
+              width="64"
+              [ngSrc]="'heroes/' + hero.name + '/icon/image'"
+              [alt]="hero.name"/>
+          </div>
+          <div class="top-list__item-hero">
+            <div class="top-list__item-hero-name font_l">{{ hero.name }}</div>
+            <div class="top-list__item-hero-role font_nunito">{{ hero.role }}</div>
+          </div>
+          <div class="top-list__item-pick-rate font_l">{{ hero.pickRate.toFixed(2) }}%</div>
+          <div class="top-list__item-win-rate font_l">{{ hero.winRate.toFixed(2) }}%</div>
+        </div>
+      </ng-container>
+    </ng-template>
+  </ng-container>
+</div>

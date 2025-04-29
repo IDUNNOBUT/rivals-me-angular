@@ -1,0 +1,29 @@
+.stack-wrapper {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 1000;
+    background-color: var(--white);
+    filter: drop-shadow(-4px 4px 4px rgba(0, 0, 0, 0.25));
+  
+    &_m {
+      width: 600px;
+  
+      @media (max-width: 650px) {
+        filter: none;
+        width: 100%;
+        left: 0;
+      }
+    }
+  
+    &_l {
+      width: 800px;
+  
+      @media (max-width: 850px) {
+        filter: none;
+        width: 100%;
+        left: 0;
+      }
+    }
+  } 

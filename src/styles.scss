@@ -1,0 +1,201 @@
+/* reset css*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+html {
+  background-color: #1E1E1E;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+/* reset css end*/
+
+:root {
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+
+  --accent: #EEBA54;
+  --primary: #344346;
+  --secondary: #1D1E2C;
+
+  --success: #00941B;
+  --warning: #940000;
+
+  --white: #FFFFFF;
+  --black: #000000;
+  --gray: #E6E6E6;
+
+  --font-xs: 1rem;
+  --font-m: 1.125rem;
+  --font-l: 1.25rem;
+  --font-xl: 1.5rem;
+
+  --icon-s: 24px;
+  --icon-m: 32px;
+  --icon-l: 64px;
+}
+
+body, html, app-root {
+  height: 100dvh;
+  overflow: hidden;
+}
+
+app-root {
+  display: flex;
+  flex-direction: column;
+}
+
+.block {
+  background-color: var(--white);
+  border-radius: .625rem;
+  padding: .5rem .625rem;
+  display: flex;
+  flex-direction: column;
+  gap: .625rem;
+
+  &__title {
+    font-size: var(--font-xl);
+    color: var(--accent);
+    font-family: "Oswald", sans-serif;
+    text-transform: uppercase;
+  }
+}
+
+.icon {
+
+  svg {
+    height: 100%;
+    aspect-ratio: 1;
+  }
+
+  img {
+    height: 100%;
+    object-fit: contain;
+  }
+
+  &_s {
+    width: var(--icon-s);
+    height: var(--icon-s);
+  }
+
+  &_m {
+    width: var(--icon-m);
+    height: var(--icon-m);
+  }
+
+  &_l {
+    width: var(--icon-l);
+    height: var(--icon-l);
+  }
+}
+
+// common styles
+.font {
+  &_xs {
+    font-size: var(--font-xs);
+  }
+
+  &_m {
+    font-size: var(--font-m);
+  }
+
+  &_l {
+    font-size: var(--font-l);
+  }
+
+  &_xl {
+    font-size: var(--font-xl);
+  }
+
+  &_roboto {
+    font-family: "Roboto", sans-serif;
+  }
+
+  &_oswald {
+    font-family: "Oswald", sans-serif;
+  }
+
+  &_nunito {
+    font-family: "Nunito", sans-serif;
+  }
+
+  &_white {
+    color: var(--white);
+  }
+
+  &_black {
+    color: var(--black);
+  }
+
+  &_accent {
+    color: var(--accent);
+  }
+
+  &_primary {
+    color: var(--primary);
+  }
+
+  &_secondary {
+    color: var(--secondary);
+  }
+
+  &_success {
+    color: var(--success);
+  }
+
+  &_warning {
+    color: var(--warning);
+  }
+
+  &_gray {
+    color: var(--gray);
+  }
+}

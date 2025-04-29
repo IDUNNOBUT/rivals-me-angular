@@ -1,0 +1,32 @@
+.score {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  row-gap: .625rem;
+  column-gap: .5rem;
+  padding: .5rem .25rem;
+  width: min-content;
+
+  &_editable {
+    border: 1px solid var(--black);
+    border-radius: .5rem;
+    background-color: var(--white);
+  }
+
+  &__input {
+    outline: transparent;
+    border: none;
+    background-color: transparent;
+    min-width: 46px;
+    -moz-appearance: textfield;
+
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+
+    &[disabled] {
+      color: var(--black);
+    }
+  }
+} 

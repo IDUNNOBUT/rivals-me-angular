@@ -1,0 +1,40 @@
+$skew-width: .75rem;
+
+.button {
+  cursor: pointer;
+  padding: .5rem;
+  appearance: none;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+
+  &_icon {
+    padding: .25rem;
+  }
+
+  &_accent {
+    background-color: var(--accent);
+    color: var(--black)
+  }
+
+  &_secondary {
+    background-color: var(--secondary);
+    color: var(--white);
+  }
+
+  &_default {
+    border-radius: .25rem;
+  }
+
+  &_leftSkew {
+    padding-left: calc($skew-width + .5rem);
+    clip-path: polygon($skew-width 0, 100% 0, 100% 100%, 0 100%);
+  }
+
+  &_rightSkew {
+    padding-right: calc($skew-width + .5rem);
+    clip-path: polygon(0 0, calc(100% - $skew-width) 0, 100% 100%, 0 100%);
+  }
+
+}

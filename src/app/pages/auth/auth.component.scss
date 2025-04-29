@@ -1,0 +1,57 @@
+:host {
+  display: contents;
+}
+
+.auth {
+  height: 100%;
+  display: grid;
+  place-items: center;
+  overflow: auto;
+  position: relative;
+  isolation: isolate;
+
+  &__content {
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: .625rem;
+  }
+
+  &__image {
+    img {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 580/220;
+    }
+  }
+
+  &__background {
+    position: absolute;
+    inset: 0;
+    object-fit: cover;
+    object-position: center;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    filter: blur(4px);
+  }
+
+  &__form {
+    align-items: end;
+
+    &-actions {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  &__skeleton {
+    align-items: center;
+    justify-content: center;
+    min-width: 300px;
+  }
+}

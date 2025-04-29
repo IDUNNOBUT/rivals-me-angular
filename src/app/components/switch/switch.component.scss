@@ -1,0 +1,47 @@
+.switch {
+  cursor: pointer;
+  font-size: var(--font-m);
+
+  &__wrapper {
+    display: inline-flex;
+    align-items: center;
+    gap: .5rem;
+
+    &_caption-top {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  &__content {
+    cursor: pointer;
+    appearance: none;
+    width: 2.25rem;
+    height: 1.375rem;
+    border-radius: 2rem;
+    background-color: var(--secondary);
+    position: relative;
+    padding: .25rem;
+
+    &::before {
+      content: "";
+      display: block;
+      aspect-ratio: 1;
+      border-radius: 50%;
+      width: .875rem;
+      transform: translateX(100%);
+      background-color: var(--white);
+      transition: all .3s ease-in-out;
+    }
+
+    &:checked::before {
+      transform: translateX(0);
+      background-color: var(--accent);
+    }
+
+    &:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
+  }
+} 

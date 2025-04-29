@@ -1,0 +1,43 @@
+.user-stack {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem .625rem;
+  gap: .625rem;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &-actions {
+      display: flex;
+      gap: .625rem;
+    }
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    gap: .625rem;
+  }
+
+  &__button {
+    align-self: flex-end;
+  }
+
+  &__password {
+    display: flex;
+    gap: .625rem;
+    align-items: center;
+    
+    app-validated-field {
+      flex: 1;
+    }
+  }
+}
+
+.error-message {
+  color: var(--warning);
+  font-size: 0.8rem;
+  margin-top: -0.5rem;
+} 
